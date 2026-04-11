@@ -1,59 +1,59 @@
-# Lemon Car Detection with Classification Algorithms from Scratch
+# Обнаружение проблемных автомобилей с помощью алгоритмов классификации, реализованных с нуля
 
-This project explores binary classification for detecting risky used cars using models implemented both **from scratch** and with **scikit-learn**.  
-The main focus is on understanding how classical classification algorithms work in practice, as well as comparing custom implementations with library-based solutions.
+Этот проект посвящён задаче бинарной классификации для выявления рискованных подержанных автомобилей с использованием моделей, реализованных как **с нуля**, так и с помощью **scikit-learn**.  
+Основной акцент сделан на понимании того, как классические алгоритмы классификации работают на практике, а также на сравнении собственных реализаций с библиотечными решениями.
 
-## Project Goal
+## Цель проекта
 
-The goal of this project is to:
-- implement core classification algorithms from scratch,
-- compare custom implementations with `scikit-learn`,
-- study the effect of feature encoding and feature engineering,
-- evaluate models using classification metrics relevant to business задачам,
-- analyze model quality on temporal train / validation / test splits.
+Цель этого проекта:
+- реализовать основные алгоритмы классификации с нуля,
+- сравнить собственные реализации с моделями из `scikit-learn`,
+- изучить влияние кодирования признаков и feature engineering,
+- оценить модели с помощью классификационных метрик, релевантных бизнес-задачам,
+- проанализировать качество моделей на временном разбиении train / validation / test.
 
-## Dataset
+## Датасет
 
-The project uses the **Don’t Get Kicked** dataset for used car risk prediction.
+В проекте используется датасет **Don’t Get Kicked** для прогнозирования риска при покупке подержанных автомобилей.
 
-Target:
-- whether a car is risky / problematic
+Целевая переменная:
+- является ли автомобиль рискованным / проблемным
 
-Features include:
-- vehicle characteristics,
-- purchase-related information,
-- categorical dealership and auction features,
-- encoded and engineered features based on the original dataset.
+Признаки включают:
+- характеристики автомобиля,
+- информацию, связанную с покупкой,
+- категориальные признаки, связанные с дилерами и аукционами,
+- закодированные и сгенерированные признаки на основе исходного датасета.
 
-## Implemented in This Project
+## Реализовано в проекте
 
-### From scratch
-- Logistic Regression
-- Gaussian Naive Bayes
-- K-Nearest Neighbors (KNN)
-- Gini metric
-- Precision
-- Recall
-- F1-score
+### С нуля
+- Логистическая регрессия
+- Наивный байесовский классификатор Гаусса
+- Метод k ближайших соседей (KNN)
+- Метрика Джини
+- Точность (Precision)
+- Полнота (Recall)
+- F1-мера
 - AUC-PR
 
-### Using libraries
+### С использованием библиотек
 - `LogisticRegression`
 - `GaussianNB`
 - `KNeighborsClassifier`
 - `GridSearchCV`
 
-## Key Results
+## Ключевые результаты
 
-Main takeaways from the project:
-- custom implementations reproduced the logic of classical classification algorithms and produced meaningful results,
-- Logistic Regression showed the strongest and most stable performance among the tested models,
-- feature engineering slightly improved validation quality,
-- KNN performed хуже on this dataset, likely due to feature space structure and encoded categorical variables,
-- temporal train / validation / test split made the evaluation setup more realistic,
-- hyperparameter tuning improved the final classification quality.
+Основные выводы по проекту:
+- собственные реализации воспроизвели логику классических алгоритмов классификации и показали осмысленные результаты,
+- логистическая регрессия показала наилучшее и наиболее стабильное качество среди протестированных моделей,
+- feature engineering немного улучшил качество на валидации,
+- KNN показал себя хуже на этом датасете, вероятно из-за структуры пространства признаков и закодированных категориальных переменных,
+- временное разбиение train / validation / test сделало схему оценки более реалистичной,
+- подбор гиперпараметров улучшил итоговое качество классификации.
 
-## Tech Stack
+## Технологический стек
 
 - Python
 - NumPy
@@ -61,10 +61,11 @@ Main takeaways from the project:
 - scikit-learn
 - Jupyter Notebook
 
-## Repository Structure
+## Структура репозитория
 
 ```text
 lemon-car-detection/
 ├── README.md
 ├── classification_project.ipynb
 └── requirements.txt
+```
