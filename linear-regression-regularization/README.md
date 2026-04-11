@@ -1,57 +1,62 @@
-# Linear Models from Scratch for Apartment Price Prediction
+# Линейные модели с нуля для предсказания цен на квартиры
 
-This project explores apartment price prediction using linear models implemented both **from scratch** and with **scikit-learn**.  
-The main focus is on understanding how linear regression and regularization work in practice, as well as comparing custom implementations with library-based solutions.
-## Project Goal
-The goal of this project is to:
-- implement core linear models from scratch,
-- study the effect of regularization,
-- compare custom implementations with `scikit-learn`,
-- analyze the impact of feature scaling and target transformation,
-- observe underfitting / overfitting behavior in practice.
+Этот проект посвящён задаче предсказания стоимости квартир с использованием линейных моделей, реализованных как **с нуля**, так и с помощью **scikit-learn**.  
+Основной акцент сделан на понимании того, как линейная регрессия и регуляризация работают на практике, а также на сравнении собственных реализаций с библиотечными решениями.
 
-## Dataset
+## Цель проекта
 
-The project uses a real estate dataset for **apartment price prediction**.
+Цель этого проекта:
+- реализовать основные линейные модели с нуля,
+- изучить влияние регуляризации,
+- сравнить собственные реализации с `scikit-learn`,
+- проанализировать влияние масштабирования признаков и преобразования целевой переменной,
+- понаблюдать за поведением недообучения и переобучения на практике.
 
-Target:
-- apartment price
+## Датасет
 
-Features include:
-- numerical characteristics such as number of rooms / bathrooms / bedrooms,
-- additional apartment or housing attributes,
-- engineered binary features based on available amenities.
+В проекте используется датасет недвижимости для **предсказания цен на квартиры**.
 
-## Implemented in This Project
+Целевая переменная:
+- цена квартиры
 
-### From scratch
-- Linear Regression
-- Analytical solution for Linear Regression
-- Ridge Regression (L2)
-- Lasso Regression (L1)
+Признаки включают:
+- числовые характеристики, такие как количество комнат / ванных комнат / спален,
+- дополнительные характеристики квартиры или жилья,
+- сгенерированные бинарные признаки на основе доступных удобств.
+
+## Реализовано в проекте
+
+### С нуля
+- Линейная регрессия
+- Аналитическое решение для линейной регрессии
+- Ridge-регрессия (L2)
+- Lasso-регрессия (L1)
 - Elastic Net
-- Feature scaling utilities
+- Утилиты для масштабирования признаков
 
-## Key Results
+## Ключевые результаты
 
-Main takeaways from the project:
-- custom linear models produced results close to `scikit-learn`,
-- feature scaling improved training stability and model quality,
-- regularization helped control model complexity,
-- log transformation of the target improved prediction quality,
-- high-degree polynomial features led to strong overfitting.
+Основные выводы по проекту:
+- собственные реализации линейных моделей показали результаты, близкие к `scikit-learn`,
+- масштабирование признаков улучшило стабильность обучения и качество модели,
+- регуляризация помогла контролировать сложность модели,
+- логарифмическое преобразование целевой переменной улучшило качество предсказания,
+- полиномиальные признаки высокой степени привели к сильному переобучению.
 
-## Tech Stack
+## Технологический стек
 
 - Python
 - NumPy
 - Pandas
 - scikit-learn
 - Jupyter Notebook
-## Repository Structure
+
+## Структура репозитория
+
 ```text
 linear-models-from-scratch/
 ├── README.md
 ├── linear_regression_project.ipynb
 ├── requirements.txt
 └── images/
+```
